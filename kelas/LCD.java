@@ -29,27 +29,35 @@ public class LCD {
 
     // menaikkan volume
     public void VolumeUp(){
-        volume++;
+        if (this.volume < 100){
+            volume++;
+        }
     }
-
+    
     // menurunkan volume
     public void VolumeDown(){
-        volume--;
+        if (this.volume > 0) {
+            volume--;
+        }
+    }
+
+    // menaikkan brightness
+    public void setBrightness(int brightness){
+        this.brightness = brightness;
     }
 
     // menaikkan brightness
     public void BrightnessUP(){
+        if (this.brightness < 100) {
         brightness++;
+        }
     }
 
     // menurunkan brightness
     public void BrightnessDown(){
+        if (this.brightness < 100) {
         brightness--;
-    }
-
-    // setting brightness
-    public void setBrightness(int brightness){
-        this.brightness = brightness;
+        }
     }
 
     // mengatur kabel
